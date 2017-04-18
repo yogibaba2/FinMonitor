@@ -1,0 +1,106 @@
+{
+	"year" : "2017",
+	"income":17482,
+	"spend" :0,
+	"investment":0,
+	"debt":0,
+	"balance":17482,
+	"months" : [
+		{
+			"name":"Jan",
+			"income":{"total":17482,"history" : [{"amount" : 17482,"comment":"F&F settlement"}]},
+			"spend" :0,
+			"investment":0,
+			"debt":0,
+			"balance":17482
+		},
+		{
+			"name":"Feb",
+			"income":69550,
+			"spend" :194181,
+			"investment":29648,
+			"debt":140000,
+			"balance":-14279
+		},
+		{
+			"name":"Mar",
+			"income":52300,
+			"spend" :20732,
+			"investment":0,
+			"debt":-34068,
+			"balance":-2500
+		},
+		{
+			"name":"Apr",
+			"income":0,
+			"spend" :0,
+			"investment":0,
+			"debt":0,
+			"balance":0
+		},
+		{
+			"name":"May",
+			"income":0,
+			"spend" :0,
+			"investment":0,
+			"debt":0,
+			"balance":0
+		},
+		{
+			"name":"Jun",
+			"income":0,
+			"spend" :0,
+			"investment":0,
+			"debt":0,
+			"balance":0
+		},
+		{
+			"name":"Jul",
+			"income":0,
+			"spend" :0,
+			"investment":0,
+			"debt":0,
+			"balance":0
+		},
+		{
+			"name":"Aug",
+			"income":0,
+			"spend" :0,
+			"investment":0,
+			"debt":0,
+			"balance":0
+		},
+		{
+			"name":"Sep",
+			"income":0,
+			"spend" :0,
+			"investment":0,
+			"debt":0,
+			"balance":0
+		},
+		{
+			"name":"Oct",
+			"income":0,
+			"spend" :0,
+			"investment":0,
+			"debt":0,
+			"balance":0
+		},
+		{
+			"name":"Nov",
+			"income":0,
+			"spend" :0,
+			"investment":0,
+			"debt":0,
+			"balance":0
+		},
+		{
+			"name":"Dec",
+			"income":0,
+			"spend" :0,
+			"investment":0,
+			"debt":0,
+			"balance":0
+		}
+	]
+}

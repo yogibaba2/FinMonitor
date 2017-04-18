@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{monthDetails.name | uppercase}} Details</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="month-view">
+   <ion-card class="spenditure-card">
+    <ion-card-header class="card-header">
+      Manage Spenditure
+    </ion-card-header>
+     <ion-list class="list">
+      <button ion-item (click)="presentPopover('income',monthDetails.income)">
+        <ion-icon name="briefcase" item-left></ion-icon>
+        <ion-label item-left>Income</ion-label>
+        <ion-label item-right>{{monthDetails.income.total}}</ion-label>
+      </button>
+
+      <button ion-item (click)="presentPopover('spend',monthDetails.spend)">
+        <ion-icon name="trash" item-left></ion-icon>
+         <ion-label item-left>Spend</ion-label>
+         <ion-label item-right>{{monthDetails.spend.total}}</ion-label>
+      </button>
+
+      <button ion-item (click)="presentPopover('investment',monthDetails.investment)">
+        <ion-icon name="thumbs-up" item-left></ion-icon>
+        <ion-label item-left>Investment</ion-label>
+        <ion-label item-right>{{monthDetails.investment.total}}</ion-label>
+      </button>
+
+      <button ion-item (click)="presentPopover('debt',monthDetails.debt)">
+        <ion-icon name="thumbs-down" item-left></ion-icon>
+        <ion-label item-left>Debt</ion-label>
+        <ion-label item-right>{{monthDetails.debt.total}}</ion-label>
+      </button>
+    </ion-list>
+    <div class="spend-action">
+      <button ion-button color="secondary" (click)="saveSpenditurs(monthDetails)" round>Save</button>
+      <button ion-button color="danger" round>Cancel</button>
+    </div>
+    
+   </ion-card>
+   <ion-card class="balance-card">
+      <ion-list>
+        <button ion-item>
+          <ion-icon name="logo-bitcoin" item-left></ion-icon>
+          <ion-label item-left>Balance</ion-label>
+          <ion-label item-right>{{monthDetails.balance}}</ion-label>
+        </button>
+      </ion-list>
+   </ion-card>
+  </div>
+</ion-content>

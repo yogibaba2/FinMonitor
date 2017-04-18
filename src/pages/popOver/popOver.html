@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Add {{spenditure | uppercase}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+	<ion-card>
+    	<ion-card-header >
+      		History
+    	</ion-card-header>
+     	<ion-list class="list" >
+     		<ion-item *ngFor="let obj of spenditureObj.history">
+     			<h2>{{obj.amount}}</h2>
+    			<p>{{obj.comment}}</p>
+     		</ion-item>
+     	</ion-list>
+    </ion-card>
+
+
+    <ion-card>
+    	<ion-card-header >
+      		Add new 
+    	</ion-card-header>
+		<ion-list>
+			
+		  	<ion-item>
+		  	
+		  		<ion-label floating col-6>{{spenditure | uppercase}}</ion-label>
+		    	<ion-input type="number" [(ngModel)]="newObj.amount"></ion-input>
+		    
+		  	</ion-item>
+		  	<ion-item>
+				<ion-label floating col-6>Comments</ion-label>
+		    	<ion-input type="text" [(ngModel)]="newObj.comment"></ion-input>
+			</ion-item>
+		  	<ion-item>
+			  	<!-- <ion-icon name="remove-circle" item-left (click)="sub()"></ion-icon>
+			  	<ion-icon name="add-circle" item-right (click)="add()"></ion-icon> -->
+			  	<button ion-button color="secondary" (click)="addNew()" round>Save</button>
+		  	</ion-item>
+		  
+		</ion-list>
+	</ion-card>
+
+</ion-content>

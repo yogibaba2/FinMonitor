@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title> DashBoard {{yearDetails.year | uppercase}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="year-view">
+    
+    <ion-card>
+       <ion-col  *ngFor="let obj of yearDetails.months" col-4>
+        <button ion-button (click)="goToMonthPage(obj)">{{obj.name | uppercase}}</button>
+      </ion-col>
+    </ion-card>
+     
+     <ion-card class="spenditure-card">
+    <ion-card-header class="card-header">
+      Year {{yearDetails.year}} Spenditure
+    </ion-card-header>
+     <ion-list class="list">
+      <button ion-item >
+        <ion-icon name="briefcase" item-left></ion-icon>
+        <ion-label item-left>Income</ion-label>
+        <ion-label item-right>{{yearDetails.income}}</ion-label>
+      </button>
+
+      <button ion-item >
+        <ion-icon name="trash" item-left></ion-icon>
+         <ion-label item-left>Spend</ion-label>
+         <ion-label item-right>{{yearDetails.spend}}</ion-label>
+      </button>
+
+      <button ion-item >
+        <ion-icon name="thumbs-up" item-left></ion-icon>
+        <ion-label item-left>Investment</ion-label>
+        <ion-label item-right>{{yearDetails.investment}}</ion-label>
+      </button>
+
+      <button ion-item >
+        <ion-icon name="thumbs-down" item-left></ion-icon>
+        <ion-label item-left>Debt</ion-label>
+        <ion-label item-right>{{yearDetails.debt}}</ion-label>
+      </button>
+
+      <button ion-item>
+          <ion-icon name="logo-bitcoin" item-left></ion-icon>
+          <ion-label item-left>Balance</ion-label>
+          <ion-label item-right>{{yearDetails.balance}}</ion-label>
+      </button>
+
+    </ion-list> 
+   </ion-card>
+    
+  </div>
+</ion-content>
